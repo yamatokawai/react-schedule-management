@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 input {
-  border: "1px solid black";
+  @apply border border-gray-300 rounded-lg h-10;
 }
