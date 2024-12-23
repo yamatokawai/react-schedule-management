@@ -1,6 +1,7 @@
 import React from "react";
+import { TodoList } from "../../types/index.ts";
 
-const Todo: React.FC<String> = ({ todo }) => {
+const Todo: React.FC<TodoList> = ({ todo }) => {
   const toggleCompleted = () => {
     todo.completed = !todo.completed; // チェックボックスのクリックで完了状態を切り替え
   };

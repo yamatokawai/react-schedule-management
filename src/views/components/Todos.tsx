@@ -15,12 +15,12 @@ const Todos: React.FC<TodoList[]> = () => {
   };
 
   const removeTodo = () => {
-    const currentTodo = todoList.filter((todo) => !todo.completed);
+    const currentTodo = todoList.filter((todo: TodoList) => !todo.completed);
     setTodoList([...currentTodo]);
   };
   return (
     <div>
-      {todoList.map((todo) => (
+      {todoList.map((todo: TodoList) => (
         <Todo todo={todo} key={todo.id} />
       ))}
       <input
@@ -35,7 +35,7 @@ const Todos: React.FC<TodoList[]> = () => {
       <button onClick={removeTodo} className="border border-black">
         削除
       </button>
-      <p>残タスク: {todoList.filter((todo) => !todo.completed).length}</p>
+      <p>残タスク: {todoList.filter((todo: TodoList) => !todo.completed).length}</p>
     </div>
   );
 };

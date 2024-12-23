@@ -6,6 +6,7 @@
     "cra-template-typescript": "1.2.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-router-dom": "^7.1.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^4.2.4"
   },
@@ -19,6 +20,18 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "*.ts",
+          "*.tsx"
+        ],
+        "parser": "@typescript-eslint/parser",
+        "plugins": [
+          "@typescript-eslint"
+        ]
+      }
     ]
   },
   "browserslist": {
@@ -38,8 +51,10 @@
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "autoprefixer": "^10.4.20",
+    "eslint-plugin-react": "^7.37.2",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "webpack-dev-server": "^5.2.0"
   }
 }
